@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Emi ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .card-container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-section {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffa8a8);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="90" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-50px, -50px) rotate(360deg); }
+        }
+        
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content-section {
+            padding: 50px 40px;
+        }
+        
+        .message-box {
+            background: linear-gradient(135deg, #ffeef8, #fff0fa);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ff6b6b;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-box::before {
+            content: '💕';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+        
+        .romantic-message {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #444;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .romantic-message strong {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+
+        .photo-gallery {
+        display: flex; /* Untuk menata foto secara berdampingan */
+        flex-wrap: wrap; /* Agar foto turun ke baris baru jika tidak muat */
+        gap: 10px; /* Jarak antar foto */
+        justify-content: center; /* Pusatkan foto */
+        }
+
+        .photo-gallery img {
+         width: 200px; /* Lebar foto, sesuaikan */
+         height: 280px; /* Tinggi foto, sesuaikan */
+         object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+         }
+        
+        .wishes-section {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wishes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 L55 35 L80 35 L60 52 L65 77 L50 65 L35 77 L40 52 L20 35 L45 35 Z" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            background-size: 50px 50px;
+            animation: twinkle 3s linear infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.3; }
+        }
+        
+        .wishes-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .wishes-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        .heart {
+            position: absolute;
+            color: rgba(255, 107, 107, 0.6);
+            font-size: 20px;
+            animation: floatUp 6s linear infinite;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 3rem;
+            }
+            
+            .content-section {
+                padding: 30px 20px;
+            }
+            
+            .hero-section {
+                padding: 40px 20px;
+            }
+            
+            .message-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="card-container">
+        <div class="hero-section">
+            <h1 class="main-title">Selamat Ulang Tahun</h1>
+            <h2 class="subtitle">Emi Tersayang ❤️❤️❤️❤️❤️❤️❤️</h2>
+        </div>
+        
+        <div class="content-section">
+            <div class="message-box">
+                <div class="romantic-message">
+                    Untuk <strong>Emi ❤️ Cintaku</strong>, yang paling di sayang ❤️❤️❤️❤️❤️❤️,<br><br>
+                    
+                    Hari ini adalah hari yang istimewa, bukan hanya karena ini hari kelahiranmu, tetapi karena hari ini mengingatkanku betapa beruntungnya aku memilikimu dalam hidup. Setiap detik bersamamu adalah hadiah yang tak ternilai, setiap senyummu adalah sinar matahari yang menerangi hariku.<br><br>
+                    
+                    Kamu bukan hanya pacarku, tapi juga <strong>sahabat terbaik</strong>, <strong>tempat ternyaman</strong> untuk pulang, dan <strong>alasan terkuat</strong> untuk terus bermimpi. Dengan semua kebaikan hatimu, kecantikan jiwamu, dan cinta yang tulus, kamu telah mengubah hidupku menjadi cerita yang paling indah.<br><br>
+                    
+                    Di hari spesialmu ini, aku berdoa semoga setiap impianmu menjadi kenyataan, semoga kebahagiaanmu berlipat ganda, dan semoga cinta kita terus tumbuh lebih kuat setiap harinya. ✨
+                </div>
+            </div>
+            
+            <div class="photo-gallery">
+            <img src="images\IMG-20250406-WA0004.jpg" alt="Deskripsi Foto 1">
+            <img src="images\IMG-20250212-WA0010.jpg" alt="Deskripsi Foto 2">
+            <img src="images\IMG-20250131-WA0011.jpg" alt="Deskripsi Foto 3">
+            </div>
+            
+            <div class="wishes-section">
+                <h3 class="wishes-title">Harapan & Doa Terbaikku</h3>
+                <div class="wishes-text">
+                    Semoga di tahun yang baru ini, Tuhan memberikanmu kesehatan yang sempurna, kebahagiaan yang melimpah, kesuksesan dalam setiap langkahmu, dan tentunya... cinta yang semakin dalam di antara kita. Aku berjanji akan selalu ada untukmu, dalam suka maupun duka, dalam tawa maupun air mata. 
+                    <br><br>
+                    <strong>Happy Birthday, My Love! 🎂🎈✨</strong>
+                </div>
+            </div>
+            
+            <div class="signature">
+                Dengan Cinta yang Tak Terbatas,<br>
+                💖 Pacarmu yang Paling Sayang 💖 Didi Yumai
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Floating hearts animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = Math.random() > 0.5 ? '💖' : '💕';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+        
+        // Create hearts periodically
+        setInterval(createHeart, 1000);
+        
+        // Add click effects to photo placeholders
+        document.querySelectorAll('.photo-placeholder').forEach(placeholder => {
+            placeholder.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-5px)';
+                }, 150);
+            });
+        });
+        
+        // Add sparkle effect on title hover
+        document.querySelector('.main-title').addEventListener('mouseenter', function() {
+            this.style.textShadow = '2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5)';
+        });
+        
+        document.querySelector('.main-title').addEventListener('mouseleave', function() {
+            this.style.textShadow = '2px 2px 4px rgba(0,0,0,0.3)';
+        });
+    </script>
+</body>
+</html>
